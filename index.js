@@ -19,13 +19,13 @@ const Imparizador = (arr) => {
 
     }
     console.log(arrResultado);
+    arrResultado = [];
 }
 
 //LOCALIZACIONES
 const buscaLocalizaciones = async () => {
-    return await axios.get(`https://rickandmortyapi.com/api/location`);
-
     
+    return await axios.get(`https://rickandmortyapi.com/api/location`);
    
 }
 
@@ -39,37 +39,37 @@ buscaLocalizaciones()
     .catch(error => console.log(error))
 
 //PERSONAJES
-// const buscaPersonajes = async () => {
-//         return await axios.get(`https://rickandmortyapi.com/api/character`);
+const buscaPersonajes = async () => {
+        return await axios.get(`https://rickandmortyapi.com/api/character`);
 
         
        
-//     }
+    }
     
-// buscaPersonajes()
-//     .then(
-//         resultado => {
-//             arrDatosAPI = resultado.data.results;
-//             Imparizador(arrDatosAPI);
-//         }
-//     )
-//     .catch(error => console.log(error))
+buscaPersonajes()
+    .then(
+        resultado => {
+            arrDatosAPI = resultado.data.results;
+            Imparizador(arrDatosAPI);
+        }
+    )
+    .catch(error => console.log(error))
 
 //EPISODIOS
-// const buscaEpisodios = async () => {
+const buscaEpisodios = async () => {
 
-//         return await axios.get(`https://rickandmortyapi.com/api/episode`) ; 
+        return await axios.get(`https://rickandmortyapi.com/api/episode`) ; 
 
         
        
-//     }
+    }
     
-// buscaEpisodios()
-//     .then(
-//         resultado => {
-//             arrDatosAPI = resultado.data.results;
-//             Imparizador(arrDatosAPI);
-//         }
-//     )
-//     .catch(error => console.log(error))
+buscaEpisodios()
+    .then(
+        resultado => {
+            arrDatosAPI = resultado.data.results;
+            Imparizador(arrDatosAPI);
+        }
+    )
+    .catch(error => console.log(error))
 
